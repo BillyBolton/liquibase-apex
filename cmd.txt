@@ -1,0 +1,35 @@
+docker network create apex_network
+
+docker network connect apex_network container_id_or_name
+
+docker network connect apex_network 23cfree
+
+
+https://github.com/oracle/docker-images/tree/main/OracleInstantClient
+
+docker pull ghcr.io/oracle/oraclelinux8-instantclient:21                               
+
+docker run -it --rm ghcr.io/oracle/oraclelinux8-instantclient:21
+
+docker run -it --rm ghcr.io/oracle/oraclelinux8-instantclient:21 bash
+
+docker run -d -p 80:8080 --name my_oracle_container ghcr.io/oracle/oraclelinux8-instantclient:21
+
+docker run -it --network apex_network ghcr.io/oracle/oraclelinux8-instantclient:21 instantclient bash
+
+
+https://www.oracle.com/database/technologies/instant-client.html
+
+docker pull
+container-registry.oracle.com/database/instantclient:latest
+
+docker run -ti --rm container-registry.oracle.com/database/instantclient sqlplus hr/welcome@example.com/pdborcl
+
+
+
+docker exec -it instantclient bash
+
+sqlplus SYS/E@23cfree:1521/FREEPDB1 as SYSDBA
+
+
+

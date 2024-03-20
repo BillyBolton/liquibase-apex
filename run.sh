@@ -1,0 +1,1 @@
+docker run -ti -v /path/to/host/data:/data oracle-instantclient-sqlplus-liquibase:v1.0
