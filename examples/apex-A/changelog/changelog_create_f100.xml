@@ -4,6 +4,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
-  <!-- <include file="./f100/application/create_application.sql" relativeToChangelogFile="true"/>  -->
-  <include file="./f102/f102.sql" relativeToChangelogFile="true" /> 
+  <include file="./f102/setup_demo_app_sqlcl.xml" relativeToChangelogFile="true" /> 
+  <!-- <include file="./f102/f102.sql" relativeToChangelogFile="true" />  -->
+  <!-- <include file="./f100/application/create_application.sql" relativeToChangelogFile="true"/> 
+  <include file="./f100-2/001-create-foo-table.sql" relativeToChangelogFile="true" />
+  <include file="./f100-2/002-add-colour-to-foo-table.sql" relativeToChangelogFile="true" />  -->
 </databaseChangeLog>

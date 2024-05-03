@@ -71,10 +71,10 @@
 
 FROM oraclelinux:8
 
-# Update package repository and install Java 17
+# Update package repository and install Java 17, unzip
 RUN dnf -y install oracle-instantclient-release-el8 && \
     dnf -y install oracle-instantclient-basic oracle-instantclient-devel oracle-instantclient-sqlplus && \
-    dnf -y install java-17-openjdk-headless && \ 
+    dnf -y install java-17-openjdk-headless unzip && \
     rm -rf /var/cache/dnf
 
 # Download and install Liquibase
@@ -87,5 +87,18 @@ RUN curl -L -o /tmp/liquibase-${LIQUIBASE_VERSION}.tar.gz "https://github.com/li
 # Download and install Oracle database driver
 RUN curl -o /usr/local/bin/lib/ojdbc11.jar https://download.oracle.com/otn-pub/otn_software/jdbc/233/ojdbc11.jar
 
+# Download and install SQLcl
+ARG SQLCL_VERSION=latest
+RUN curl -L -o /tmp/sqlcl-${SQLCL_VERSION}.zip "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-${SQLCL_VERSION}.zip" -H "Cookie: oraclelicense=accept-securebackup-cookie" && \
+    mkdir -p /opt/sqlcl && \
+    unzip /tmp/sqlcl-${SQLCL_VERSION}.zip -d /opt/sqlcl && \
+    find /opt/sqlcl -type f -iname '*.sh' -exec chmod +x {} + && \
+    rm /tmp/sqlcl-${SQLCL_VERSION}.zip
+
+# Add SQLcl to the PATH environment variable
+ENV PATH=$PATH:/opt/sqlcl/sqlcl/bin
+
+# Set the entry point to sqlcl
+CMD ["sql"]
 # CMD ["sqlplus", "-v"]
-CMD ["liquibase", "-v"]
+# CMD ["liquibase", "-v"]

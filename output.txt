@@ -1,0 +1,7 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Apr 26 19:59:44 2024
+Version 21.13.0.0.0
+
+Copyright (c) 1982, 2022, Oracle.  All rights reserved.
+
+Enter user-name: selectsssfdgs^C^C^C^C^Cexitime="2024-04-26T17:57:13-04:00" level=error msg="error waiting for container: "

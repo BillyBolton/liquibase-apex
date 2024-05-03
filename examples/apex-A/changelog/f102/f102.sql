@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset Liquibase Pro User:1-package runWith:sqlplus splitStatements:true
+--changeset liquibase_user:1-package
 --------------------------------------------------------------------------------
 -- Name: Sample Calendar
 -- Copyright (c) 2012, 2024 Oracle and/or its affiliates.

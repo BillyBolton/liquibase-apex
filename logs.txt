@@ -1,0 +1,6 @@
+]0;@f00fd3ff0e25:/[root@f00fd3ff0e25 /]# 
+]0;@f00fd3ff0e25:/[root@f00fd3ff0e25 /]# 
+]0;@f00fd3ff0e25:/[root@f00fd3ff0e25 /]# ^C
+]0;@f00fd3ff0e25:/[root@f00fd3ff0e25 /]# ^C
+]0;@f00fd3ff0e25:/[root@f00fd3ff0e25 /]# ^C
+]0;@f00fd3ff0e25:/[root@f00fd3ff0e25 /]# 
