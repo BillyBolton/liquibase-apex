@@ -99,6 +99,6 @@ RUN curl -L -o /tmp/sqlcl-${SQLCL_VERSION}.zip "https://download.oracle.com/otn_
 ENV PATH=$PATH:/opt/sqlcl/sqlcl/bin
 
 # Set the entry point to sqlcl
-CMD ["sql"]
+# CMD ["sql"]
 # CMD ["sqlplus", "-v"]
-# CMD ["liquibase", "-v"]
+CMD ["liquibase", "-v"]
